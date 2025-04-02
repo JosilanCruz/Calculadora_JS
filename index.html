@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <title>Calculadora JS</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/calcular.js"></script>
+</head>
+
+<body>
+    <table id="calculadora">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="resposta">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="AC" onclick="limpar_entrada()" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="⬅" onclick="limpar_campo()" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="+" onclick="res('+')" onkeydown="atualizar_entrada(e)">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="9" onclick="res('9')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="res('8')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="7" onclick="res('7')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="-" onclick="res('-')" onkeydown="atualizar_entrada(e)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="6" onclick="res('6')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="res('5')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="4" onclick="res('4')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="*" onclick="res('*')" onkeydown="atualizar_entrada(e)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="3" onclick="res('3')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="res('2')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="1" onclick="res('1')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="/" onclick="res('/')" onkeydown="atualizar_entrada(e)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" onclick="res('0')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="." onclick="res('.')" onkeydown="atualizar_entrada(e)">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="calcular()">
+            </td>
+            <td>
+                <input type="button" value="%" onclick="res('%')" onkeydown="atualizar_entrada(e)">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
